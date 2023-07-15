@@ -1,0 +1,66 @@
+.header, .nav, .main, .sitebar, .adariya ,.footer
+{
+    background-color: brown;
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+.sitebar{
+    grid-area: sitebar;
+}
+
+.adariya{
+    grid-area: adariya;
+}
+
+.footer{
+    grid-area: footer;
+
+}
+
+.contenar{
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header  header  header   header"
+    "nav     main    main     sitebar"
+    "nav     main    main     adariya"
+    "footer footer  footer  footer"
+    ;
+}
+
+@media screen and (max-width: 576px){
+    .contenar{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "sitebar"
+        "adariya"
+        "footer";
+      
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .contenar{
+        grid-template-areas: 
+        "header  header header"
+        "nav  nav  nav "
+        "sitebar main main "
+        "adariya footer footer ";
+      
+    }
+}
+
